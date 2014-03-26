@@ -26,5 +26,5 @@ you write:
 
 E.g.:
 
-  UIScrollView *scrollView = ...;
-  scrollView.delegate = [iOSWeakForwarder forwardTo:self associatedWith:scrollView];
+		UIScrollView *scrollView = ...;
+		scrollView.delegate = [iOSWeakForwarder forwardTo:self associatedWith:scrollView];
