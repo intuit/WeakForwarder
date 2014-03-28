@@ -1,5 +1,5 @@
 //
-//  iOSWeakForwarder.h
+//  INTUWeakForwarder.h
 //
 //  Created by Jeff Shulman and Dan Rowley on 3/14/14.
 //	Copyright (c) 2014 Intuit Inc
@@ -44,16 +44,16 @@
 //
 //	you write:
 //
-//		<someinstance>.delegate = [iOSWeakForwarder forwardTo:self associatedWith:<someinstance>];
+//		<someinstance>.delegate = [INTUWeakForwarder forwardTo:self associatedWith:<someinstance>];
 //
 //  E.g.:
 //
 //  UIScrollView *scrollView = ...;
-//  scrollView.delegate = [iOSWeakForwarder forwardTo:self associatedWith:scrollView];
+//  scrollView.delegate = [INTUWeakForwarder forwardTo:self associatedWith:scrollView];
 
 #import <Foundation/Foundation.h>
 
-@interface iOSWeakForwarder : NSProxy
+@interface INTUWeakForwarder : NSProxy
 
 /// Factory for NSProxy forwarding object
 ///

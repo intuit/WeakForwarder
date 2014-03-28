@@ -17,8 +17,8 @@
 		7F32FA0E18E394FE00BF3FF4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F32FA0D18E394FE00BF3FF4 /* ViewController.m */; };
 		7F32FA1018E394FE00BF3FF4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F32FA0F18E394FE00BF3FF4 /* Images.xcassets */; };
 		7F32FA2E18E3957D00BF3FF4 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F32FA2D18E3957D00BF3FF4 /* SecondViewController.m */; };
-		7F32FA3118E3959100BF3FF4 /* iOSWeakForwarder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F32FA3018E3959100BF3FF4 /* iOSWeakForwarder.m */; };
 		7F32FA3418E3973E00BF3FF4 /* DummyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F32FA3318E3973E00BF3FF4 /* DummyClass.m */; };
+		7F6B6DC618E6016300678510 /* INTUWeakForwarder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F6B6DC518E6016300678510 /* INTUWeakForwarder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,10 +39,10 @@
 		7F32FA1618E394FE00BF3FF4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		7F32FA2C18E3957D00BF3FF4 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		7F32FA2D18E3957D00BF3FF4 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		7F32FA2F18E3959100BF3FF4 /* iOSWeakForwarder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOSWeakForwarder.h; sourceTree = "<group>"; };
-		7F32FA3018E3959100BF3FF4 /* iOSWeakForwarder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iOSWeakForwarder.m; sourceTree = "<group>"; };
 		7F32FA3218E3973E00BF3FF4 /* DummyClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyClass.h; sourceTree = "<group>"; };
 		7F32FA3318E3973E00BF3FF4 /* DummyClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyClass.m; sourceTree = "<group>"; };
+		7F6B6DC418E6016300678510 /* INTUWeakForwarder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = INTUWeakForwarder.h; path = ../INTUWeakForwarder.h; sourceTree = "<group>"; };
+		7F6B6DC518E6016300678510 /* INTUWeakForwarder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = INTUWeakForwarder.m; path = ../INTUWeakForwarder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +62,8 @@
 		7F32F9EB18E394FE00BF3FF4 = {
 			isa = PBXGroup;
 			children = (
-				7F32FA2F18E3959100BF3FF4 /* iOSWeakForwarder.h */,
-				7F32FA3018E3959100BF3FF4 /* iOSWeakForwarder.m */,
+				7F6B6DC418E6016300678510 /* INTUWeakForwarder.h */,
+				7F6B6DC518E6016300678510 /* INTUWeakForwarder.m */,
 				7F32F9FD18E394FE00BF3FF4 /* Example */,
 				7F32F9F618E394FE00BF3FF4 /* Frameworks */,
 				7F32F9F518E394FE00BF3FF4 /* Products */,
@@ -185,9 +185,9 @@
 			files = (
 				7F32FA2E18E3957D00BF3FF4 /* SecondViewController.m in Sources */,
 				7F32FA0E18E394FE00BF3FF4 /* ViewController.m in Sources */,
+				7F6B6DC618E6016300678510 /* INTUWeakForwarder.m in Sources */,
 				7F32FA0818E394FE00BF3FF4 /* AppDelegate.m in Sources */,
 				7F32FA3418E3973E00BF3FF4 /* DummyClass.m in Sources */,
-				7F32FA3118E3959100BF3FF4 /* iOSWeakForwarder.m in Sources */,
 				7F32FA0418E394FE00BF3FF4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,6 +329,7 @@
 				7F32FA2818E394FE00BF3FF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

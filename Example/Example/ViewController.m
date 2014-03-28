@@ -24,7 +24,7 @@
 //	OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 //	WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-#import "iOSWeakForwarder.h"
+#import "INTUWeakForwarder.h"
 #import "ViewController.h"
 #import "SecondViewController.h"
 
@@ -57,7 +57,7 @@
 		// second view controller leaving our unsuspecting dummy class with a deallocated
 		// delegate but not a nil reference since it was unsafe_unretained.
 		//
-		// So without using iOSWeakForwarder this next line would cause a crash.
+		// So without using INTUWeakForwarder this next line would cause a crash.
 		[self.dummy doLogMessage:@"viewDidAppear"];
 	});
 }
@@ -69,7 +69,7 @@
 	// Instead of setting dummy's delegate directly to vc (the second view controller) we will set it to
 	// the weak forwarder which will create a NSProxy object that will stick around as long as "dummy"
 	// does but will automatically, due to a true weak reference, nil out the forwarded to object (vc here.)
-	self.dummy.delegate = [iOSWeakForwarder forwardTo:vc associatedWith:self.dummy];
+	self.dummy.delegate = [INTUWeakForwarder forwardTo:vc associatedWith:self.dummy];
 	
 	dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 		NSLog(@"After prepareForSegue");

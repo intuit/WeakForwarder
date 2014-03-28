@@ -1,4 +1,4 @@
-iOSWeakForwarder
+INTUWeakForwarder
 ================
 
 "weak" references are great to use for delegate properties since they will automatically
@@ -22,9 +22,9 @@ Instead of writing:
 
 you write:
 
-		<someinstance>.delegate = [iOSWeakForwarder forwardTo:self associatedWith:<someinstance>];
+		<someinstance>.delegate = [INTUWeakForwarder forwardTo:self associatedWith:<someinstance>];
 
 E.g.:
 
 		UIScrollView *scrollView = ...;
-		scrollView.delegate = [iOSWeakForwarder forwardTo:self associatedWith:scrollView];
+		scrollView.delegate = [INTUWeakForwarder forwardTo:self associatedWith:scrollView];

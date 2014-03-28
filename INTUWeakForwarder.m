@@ -1,5 +1,5 @@
 //
-//  iOSWeakForwarder.m
+//  INTUWeakForwarder.m
 //
 //  Created by Jeff Shulman and Dan Rowley on 3/14/14.
 //	Copyright (c) 2014 Intuit Inc
@@ -23,10 +23,10 @@
 //	OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 //	WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-#import "iOSWeakForwarder.h"
+#import "INTUWeakForwarder.h"
 #import <objc/runtime.h>
 
-@interface iOSWeakForwarder ()
+@interface INTUWeakForwarder ()
 
 /// Save the "real" delegates Class to return the proper signature for it when the reference is nil.
 @property (nonatomic, strong) Class realDelegateClass;
@@ -36,15 +36,15 @@
 
 @end
 
-@implementation iOSWeakForwarder
+@implementation INTUWeakForwarder
 
 +(id)forwardTo:(id)theRealDelegate associatedWith:(id)object
 {
-	QBMDebugAssert(theRealDelegate, @"Trying to forward to a nil object");
-	QBMDebugAssert(object, @"Trying associate forwarder to a nil object");
+	NSAssert(theRealDelegate, @"Trying to forward to a nil object");
+	NSAssert(object, @"Trying associate forwarder to a nil object");
 	
 	// Create the NSProxy subclass to do the forwarding
-	iOSWeakForwarder* forwarder = [iOSWeakForwarder alloc];
+	INTUWeakForwarder* forwarder = [INTUWeakForwarder alloc];
 	forwarder.realDelegate = theRealDelegate;
 	forwarder.realDelegateClass = [theRealDelegate class];
 	
